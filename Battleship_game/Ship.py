@@ -6,7 +6,7 @@ Created on Jul 21, 2015
 class Ship(object):
     postion = []
     
-    def __init__(self,name, position, lives):
+    def __init__(self, name, position, lives):
         self.name = name
         self.livesLeft = lives
         self.position = position.parse(",")
