@@ -3,13 +3,17 @@ Created on Jul 21, 2015
 
 @author: Rick
 '''
-class Ship(object):
+class GamePiece(object):
+    def __init__(self, name, position, lives=1):
+        self.name = name
+        self.livesLeft = lives
+        self.position = position
+    
+class Ship(GamePiece):
     postion = []
     
     def __init__(self, name, position, lives):
-        self.name = name
-        self.livesLeft = lives
-        self.position = position.parse(",")
+        super.__init__(name,position)
         self.initialLives = lives
     
     def hit(self):
